@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 180" fill="none">
+  <!-- Background -->
+  <rect width="180" height="180" fill="#0D1B2A"/>
+
+  <!-- Accent border inset -->
+  <rect x="8" y="8" width="164" height="164" stroke="#588157" stroke-width="2" fill="none" opacity="0.5"/>
+
+  <!--
+    R — scaled up proportionally from 64px version
+    Scale factor: 180/64 = 2.8125
+  -->
+  <!-- Stem -->
+  <rect x="31" y="45" width="13" height="90" fill="#E0E1DD"/>
+  <!-- Top crossbar -->
+  <rect x="31" y="45" width="42" height="13" fill="#E0E1DD"/>
+  <!-- Bowl right edge -->
+  <rect x="62" y="58" width="13" height="28" fill="#E0E1DD"/>
+  <!-- Mid crossbar -->
+  <rect x="31" y="83" width="37" height="11" fill="#E0E1DD"/>
+  <!-- Leg polygon -->
+  <polygon points="59,94 72,94 87,135 74,135" fill="#E0E1DD"/>
+
+  <!--
+    I — accent green
+  -->
+  <!-- Top cap -->
+  <rect x="98" y="45" width="51" height="13" fill="#588157"/>
+  <!-- Stem -->
+  <rect x="118" y="58" width="13" height="65" fill="#588157"/>
+  <!-- Bottom cap -->
+  <rect x="98" y="122" width="51" height="13" fill="#588157"/>
+</svg>

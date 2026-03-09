@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <!-- Background -->
+  <rect width="64" height="64" fill="#0D1B2A"/>
+
+  <!-- Accent border inset -->
+  <rect x="2.75" y="2.75" width="58.5" height="58.5" stroke="#588157" stroke-width="1.5" fill="none" opacity="0.55"/>
+
+  <!--
+    R  — left side (x: 11–32)
+    Built from clean rectangles so it renders sharp at all sizes
+  -->
+  <!-- Stem -->
+  <rect x="11" y="16" width="4.5" height="32" fill="#E0E1DD"/>
+  <!-- Top crossbar -->
+  <rect x="11" y="16" width="15" height="4.5" fill="#E0E1DD"/>
+  <!-- Bowl right edge -->
+  <rect x="22" y="20.5" width="4.5" height="10" fill="#E0E1DD"/>
+  <!-- Mid crossbar -->
+  <rect x="11" y="29.5" width="13" height="4" fill="#E0E1DD"/>
+  <!-- Leg — angled down-right using a polygon -->
+  <polygon points="21,33.5 25.5,33.5 31,48 26.5,48" fill="#E0E1DD"/>
+
+  <!--
+    I  — right side (x: 35–53)
+    Accent green — ties to brand color
+  -->
+  <!-- Top cap -->
+  <rect x="35" y="16" width="18" height="4.5" fill="#588157"/>
+  <!-- Stem -->
+  <rect x="42" y="20.5" width="4.5" height="23" fill="#588157"/>
+  <!-- Bottom cap -->
+  <rect x="35" y="43.5" width="18" height="4.5" fill="#588157"/>
+</svg>
