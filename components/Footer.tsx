@@ -6,7 +6,7 @@ const links = [
   { label: "Work",      href: "#gallery"  },
   { label: "About",     href: "#about"    },
   { label: "Book",      href: "#booking"  },
-  { label: "Instagram ↗", href: "https://www.instagram.com/rafael1barra/", external: true },
+  { label: "Instagram ↗", href: "https://www.instagram.com/shuttergoon/", external: true },
 ];
 
 export default function Footer() {

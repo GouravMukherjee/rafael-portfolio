@@ -91,7 +91,7 @@ export default function Hero({ ready }: HeroProps) {
           <div style={{ overflow: "hidden" }}>
             <div
               ref={line2Ref}
-              style={{ fontFamily: "var(--font-display)", fontSize: "clamp(72px, 13vw, 180px)", lineHeight: 0.88, color: "var(--text-secondary)", paddingLeft: "clamp(40px, 8vw, 120px)", transform: "translateY(110%)" }}
+              style={{ fontFamily: "var(--font-display)", fontSize: "clamp(72px, 13vw, 180px)", lineHeight: 0.88, color: "var(--accent)", paddingLeft: "clamp(40px, 8vw, 120px)", transform: "translateY(110%)" }}
             >
               IBARRA
             </div>

@@ -3,8 +3,7 @@
 import { useState, useCallback } from "react";
 import Loader from "@/components/Loader";
 import Navbar from "@/components/Navbar";
-import Hero from "@/components/Hero";
-import Marquee from "@/components/Marquee";
+import HeroSequence from "@/components/HeroSequence";
 import Gallery from "@/components/Gallery";
 import About from "@/components/About";
 import Services from "@/components/Services";
@@ -26,8 +25,7 @@ export default function Home() {
       <Loader onComplete={handleLoaderComplete} />
       <Navbar ready={ready} />
       <main>
-        <Hero ready={ready} />
-        <Marquee />
+        <HeroSequence />
         <Gallery />
         <About />
         <Services />

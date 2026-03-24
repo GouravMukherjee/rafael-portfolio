@@ -1,0 +1,120 @@
+/* ── Section ──────────────────────────────────────────────── */
+.section {
+  position: relative;
+  height: 100dvh;
+  background-color: #000000;
+  overflow: hidden;
+}
+
+/* ── Image stack ──────────────────────────────────────────── */
+
+/* overflow:hidden clips the GSAP scale so no white edges ever show */
+.imageOuter {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
+
+/* The <img> itself — GSAP targets this for the scale transform.
+   Starts at scale(1.15) set by gsap.set(); the extra coverage from
+   scale > 1 means it always fills the viewport with no edge bleed. */
+.image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 30%;
+  will-change: transform;
+  display: block;
+}
+
+/* ── Overlays ─────────────────────────────────────────────── */
+
+/* Permanent gradient: subtle top darkening → heavy black bottom-fade */
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.18)  0%,
+    rgba(0, 0, 0, 0.38) 55%,
+    rgba(0, 0, 0, 0.70) 80%,
+    #000000             100%
+  );
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Scroll-driven blackout — GSAP sets opacity 0 → 1 at end of sequence */
+.dimOverlay {
+  position: absolute;
+  inset: 0;
+  background: #000000;
+  pointer-events: none;
+  z-index: 2;
+}
+
+/* ── Content ──────────────────────────────────────────────── */
+.content {
+  position: absolute;
+  bottom: clamp(48px, 8vh, 96px);
+  left:   clamp(24px, 5vw, 80px);
+  right:  clamp(24px, 5vw, 80px);
+  z-index: 3;
+  will-change: transform, opacity;
+}
+
+/* ── Name ─────────────────────────────────────────────────── */
+.name {
+  font-family: var(--font-display);
+  font-size: clamp(80px, 12vw, 150px);
+  line-height: 0.88;
+  letter-spacing: 0.06em;
+  margin: 0 0 24px;
+  display: flex;
+  flex-direction: column;
+}
+
+.line1 {
+  color: #e8e8e6;
+}
+
+.line2 {
+  color: #89a17d;
+}
+
+/* ── Tagline ──────────────────────────────────────────────── */
+.tagline {
+  font-family: var(--font-mono, monospace);
+  font-size: 13px;
+  letter-spacing: 0.26em;
+  color: #89a17d;
+  text-transform: uppercase;
+  margin: 0 0 20px;
+}
+
+/* ── CTA ──────────────────────────────────────────────────── */
+.cta {
+  display: inline-block;
+  background: none;
+  border: none;
+  border-bottom: 1px solid #4d6b47;
+  padding: 0 0 5px;
+  font-family: var(--font-mono, monospace);
+  font-size: 12px;
+  letter-spacing: 0.16em;
+  color: #8a8f87;
+  text-transform: uppercase;
+  cursor: none;
+  transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+.cta:hover {
+  color: #c4d4bb;
+  border-color: #89a17d;
+}
+
+@media (pointer: coarse) {
+  .cta { cursor: auto; }
+}

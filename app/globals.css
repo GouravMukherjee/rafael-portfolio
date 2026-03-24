@@ -5,24 +5,25 @@
 /* ── CSS Custom Properties ─────────────────────────────────── */
 :root {
   /* Core backgrounds */
-  --bg-primary:    #0D1B2A;
-  --bg-elevated:   #1B263B;
-  --bg-surface:    #15202E;
+  --bg-primary:    #000000;
+  --bg-elevated:   #0a0a0a;
+  --bg-surface:    #111410;
 
   /* Text hierarchy */
-  --text-primary:   #E0E1DD;
-  --text-secondary: #778DA9;
-  --text-muted:     #415A77;
+  --text-primary:   #e8e8e6;
+  --text-secondary: #8a8f87;
+  --text-muted:     #555a52;
 
-  /* Accent — Fern Green */
-  --accent:        #588157;
-  --accent-hover:  #3A5A40;
-  --accent-glow:   rgba(88, 129, 87, 0.25);
-  --accent-subtle: rgba(88, 129, 87, 0.08);
+  /* Accent — Sage Green */
+  --accent:        #89a17d;
+  --accent-deep:   #4d6b47;
+  --accent-mist:   #c4d4bb;
+  --accent-glow:   rgba(137, 161, 125, 0.20);
+  --accent-subtle: rgba(137, 161, 125, 0.06);
 
   /* Utility */
-  --border:        rgba(224, 225, 221, 0.10);
-  --border-accent: rgba(88, 129, 87, 0.30);
+  --border:        rgba(255, 255, 255, 0.07);
+  --border-accent: rgba(137, 161, 125, 0.25);
 }
 
 /* ── Base ───────────────────────────────────────────────────── */

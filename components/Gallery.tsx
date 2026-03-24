@@ -10,9 +10,8 @@ gsap.registerPlugin(ScrollTrigger);
 export const galleryItems = [
   {
     id: "01",
-    // Rich forest + earthy — the hero landscape card
     gradient: "linear-gradient(135deg, #1a3a22 0%, #2d5a34 35%, #1a2e1e 70%, #0e1a11 100%)",
-    accent: "#588157",
+    accent: "#89a17d",
     cat: "Nature · Landscape",
     title: "Golden Hour Ridge",
     gridStyle: { gridColumn: "1 / 8", gridRow: "1 / 3", height: "580px" },
@@ -20,9 +19,8 @@ export const galleryItems = [
   },
   {
     id: "02",
-    // Deep midnight blue — urban night
     gradient: "linear-gradient(135deg, #0d2035 0%, #1b3a52 40%, #0d1b2a 100%)",
-    accent: "#778DA9",
+    accent: "#8a8f87",
     cat: "Street · Urban",
     title: "City After Rain",
     gridStyle: { gridColumn: "8 / 13", gridRow: "1 / 2", height: "280px" },
@@ -30,9 +28,8 @@ export const galleryItems = [
   },
   {
     id: "03",
-    // Warm amber-green portrait tones
     gradient: "linear-gradient(160deg, #2a3018 0%, #3d4a22 45%, #1e2a10 100%)",
-    accent: "#A3B18A",
+    accent: "#c4d4bb",
     cat: "Portrait",
     title: "The Gaze",
     gridStyle: { gridColumn: "8 / 13", gridRow: "2 / 3", height: "280px" },
@@ -40,9 +37,8 @@ export const galleryItems = [
   },
   {
     id: "04",
-    // Dark hunter green — wilderness
     gradient: "linear-gradient(160deg, #0d2218 0%, #163524 40%, #0a1812 100%)",
-    accent: "#588157",
+    accent: "#89a17d",
     cat: "Nature · Landscape",
     title: "Into the Wild",
     gridStyle: { gridColumn: "1 / 5", gridRow: "3 / 4", height: "420px" },
@@ -50,9 +46,8 @@ export const galleryItems = [
   },
   {
     id: "05",
-    // Navy indigo — cinematic portrait
     gradient: "linear-gradient(160deg, #152038 0%, #1e2f4a 45%, #0f1a2a 100%)",
-    accent: "#415A77",
+    accent: "#555a52",
     cat: "Portrait",
     title: "Self Portrait",
     gridStyle: { gridColumn: "5 / 9", gridRow: "3 / 4", height: "420px" },
@@ -60,9 +55,8 @@ export const galleryItems = [
   },
   {
     id: "06",
-    // Deep forest-navy blend — street
     gradient: "linear-gradient(135deg, #1e3020 0%, #152535 50%, #0e1a14 100%)",
-    accent: "#3A5A40",
+    accent: "#4d6b47",
     cat: "Street · Urban",
     title: "Neon & Concrete",
     gridStyle: { gridColumn: "9 / 13", gridRow: "3 / 4", height: "420px" },

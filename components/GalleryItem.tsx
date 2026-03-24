@@ -57,6 +57,7 @@ export default function GalleryItem({ item, containerStyle }: GalleryItemProps) 
       style={{
         position: "relative",
         overflow: "hidden",
+        borderRadius: "10px",
         backgroundColor: "var(--bg-elevated)",
         cursor: "none",
         ...containerStyle,

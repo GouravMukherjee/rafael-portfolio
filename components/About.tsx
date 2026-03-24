@@ -49,14 +49,14 @@ export default function About() {
       <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 340px), 1fr))", gap: "clamp(40px, 6vw, 80px)", alignItems: "start" }}>
         {/* Left: Portrait */}
         <div ref={portraitRef} style={{ opacity: 0, position: "relative" }}>
-          <div style={{ aspectRatio: "4/5", background: "linear-gradient(160deg, #141f1e 0%, #0e1a16 50%, var(--bg-primary) 100%)", position: "relative", overflow: "hidden" }}>
+          <div style={{ aspectRatio: "4/5", background: "linear-gradient(160deg, #141f1e 0%, #0e1a16 50%, var(--bg-primary) 100%)", position: "relative", overflow: "hidden", borderRadius: "12px" }}>
             <span style={{ position: "absolute", inset: 0, display: "flex", alignItems: "center", justifyContent: "center", fontFamily: "var(--font-mono)", fontSize: "10px", letterSpacing: "0.2em", textTransform: "uppercase", color: "var(--text-muted)", opacity: 0.4 }}>
               Photo Placeholder
             </span>
-            <div style={{ position: "absolute", bottom: "16px", left: "16px", backgroundColor: "rgba(13,27,42,0.8)", backdropFilter: "blur(8px)", padding: "6px 12px" }}>
+            <div style={{ position: "absolute", bottom: "16px", left: "16px", backgroundColor: "rgba(13,27,42,0.8)", backdropFilter: "blur(8px)", padding: "6px 12px", borderRadius: "6px" }}>
               <span style={{ fontFamily: "var(--font-mono)", fontSize: "10px", letterSpacing: "0.2em", color: "var(--text-secondary)" }}>@rafael1barra</span>
             </div>
-            <div style={{ position: "absolute", top: "24px", right: "-1px", backgroundColor: "var(--accent)", padding: "8px 6px", writingMode: "vertical-rl", transform: "rotate(180deg)" }}>
+            <div style={{ position: "absolute", top: "24px", right: "-1px", backgroundColor: "var(--accent)", padding: "8px 6px", writingMode: "vertical-rl", transform: "rotate(180deg)", borderRadius: "0 0 6px 6px" }}>
               <span style={{ fontFamily: "var(--font-display)", fontSize: "13px", letterSpacing: "0.1em", color: "var(--bg-primary)" }}>VISUAL ARTIST</span>
             </div>
           </div>

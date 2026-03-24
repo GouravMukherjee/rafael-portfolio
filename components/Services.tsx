@@ -61,10 +61,10 @@ export default function Services() {
         </div>
       </div>
 
-      {/* Services grid — separated by borders */}
+      {/* Services grid */}
       <div
         ref={gridRef}
-        style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))", borderLeft: "1px solid var(--border)" }}
+        style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))", gap: "12px", marginTop: "24px" }}
       >
         {services.map(({ num, name, desc }) => (
           <ServiceCard key={num} num={num} name={name} desc={desc} />
@@ -98,8 +98,8 @@ function ServiceCard({ num, name, desc }: { num: string; name: string; desc: str
       style={{
         position: "relative",
         padding: "40px 32px",
-        borderRight: "1px solid var(--border)",
-        borderBottom: "1px solid var(--border)",
+        border: "1px solid var(--border)",
+        borderRadius: "10px",
         backgroundColor: "var(--bg-elevated)",
         transition: "background-color 0.3s",
         opacity: 0,

@@ -8,19 +8,22 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        forest: {
-          1: "#DAD7CD",
-          2: "#A3B18A",
-          3: "#588157",
-          4: "#3A5A40",
-          5: "#344E41",
+        sage: {
+          mist:    "#c4d4bb",
+          light:   "#b0c2a5",
+          DEFAULT: "#89a17d",
+          deep:    "#4d6b47",
+          dark:    "#2d4a2a",
         },
-        midnight: {
-          1: "#0D1B2A",
-          2: "#1B263B",
-          3: "#415A77",
-          4: "#778DA9",
-          5: "#E0E1DD",
+        pitch: {
+          1: "#111410",
+          2: "#0a0a0a",
+          3: "#000000",
+        },
+        stone: {
+          light:   "#e8e8e6",
+          DEFAULT: "#8a8f87",
+          dark:    "#555a52",
         },
       },
       fontFamily: {
