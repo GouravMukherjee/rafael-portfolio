@@ -22,43 +22,43 @@ export default function Loader({ onComplete }: LoaderProps) {
 
     const tl = gsap.timeline();
 
-    // 0.2s: Name clips up from below
+    // 0.15s delay: name clips up
     tl.fromTo(
       name,
       { y: "110%", opacity: 0 },
-      { y: "0%", opacity: 1, duration: 0.8, ease: "power3.out" },
-      0.2
+      { y: "0%", opacity: 1, duration: 0.65, ease: "power3.out" },
+      0.15
     );
 
-    // 0.2s: Progress bar fills
+    // 0.15s delay: progress bar fills (1.2s — was 1.8s)
     tl.fromTo(
       barFill,
       { width: "0%" },
       {
         width: "100%",
-        duration: 1.8,
+        duration: 1.2,
         ease: "power2.inOut",
         onUpdate() {
           const p = Math.round(this.progress() * 100);
           if (count) count.textContent = String(p).padStart(3, "0");
         },
       },
-      0.2
+      0.15
     );
 
-    // After bar completes + 0.2s gap: slide loader up
+    // 0.1s gap then slide loader up (0.65s — was 0.9s)
     tl.to(
       loader,
       {
         yPercent: -100,
-        duration: 0.9,
+        duration: 0.65,
         ease: "power3.inOut",
         onComplete: () => {
           loader.style.display = "none";
           onComplete();
         },
       },
-      "+=0.2"
+      "+=0.1"
     );
 
     return () => {

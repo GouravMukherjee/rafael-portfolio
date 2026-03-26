@@ -30,14 +30,16 @@ export default function Services() {
   const gridRef    = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    const header = headerRef.current;
-    const grid   = gridRef.current;
-    if (!header || !grid) return;
+    const ctx = gsap.context(() => {
+      const header = headerRef.current;
+      const grid   = gridRef.current;
+      if (!header || !grid) return;
 
-    gsap.fromTo(header, { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.8, ease: "power3.out", scrollTrigger: { trigger: header, start: "top 85%", once: true } });
-    gsap.fromTo(Array.from(grid.children), { opacity: 0, y: 40 }, { opacity: 1, y: 0, stagger: 0.1, duration: 0.8, ease: "power3.out", scrollTrigger: { trigger: grid, start: "top 80%", once: true } });
+      gsap.fromTo(header, { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.8, ease: "power3.out", scrollTrigger: { trigger: header, start: "top 85%", once: true } });
+      gsap.fromTo(Array.from(grid.children), { opacity: 0, y: 40 }, { opacity: 1, y: 0, stagger: 0.1, duration: 0.8, ease: "power3.out", scrollTrigger: { trigger: grid, start: "top 80%", once: true } });
+    });
 
-    return () => { ScrollTrigger.getAll().forEach((t) => t.kill()); };
+    return () => ctx.revert();
   }, []);
 
   return (

@@ -35,9 +35,11 @@ export default function Booking() {
   const [sent, setSent] = useState(false);
 
   useEffect(() => {
-    gsap.fromTo(leftRef.current,  { opacity: 0, x: -40 }, { opacity: 1, x: 0, duration: 1.0, ease: "power3.out", scrollTrigger: { trigger: leftRef.current,  start: "top 80%", once: true } });
-    gsap.fromTo(rightRef.current, { opacity: 0, x: 40  }, { opacity: 1, x: 0, duration: 1.0, ease: "power3.out", scrollTrigger: { trigger: rightRef.current, start: "top 80%", once: true } });
-    return () => { ScrollTrigger.getAll().forEach((t) => t.kill()); };
+    const ctx = gsap.context(() => {
+      gsap.fromTo(leftRef.current,  { opacity: 0, x: -40 }, { opacity: 1, x: 0, duration: 1.0, ease: "power3.out", scrollTrigger: { trigger: leftRef.current,  start: "top 80%", once: true } });
+      gsap.fromTo(rightRef.current, { opacity: 0, x: 40  }, { opacity: 1, x: 0, duration: 1.0, ease: "power3.out", scrollTrigger: { trigger: rightRef.current, start: "top 80%", once: true } });
+    });
+    return () => ctx.revert();
   }, []);
 
   const handleFocus  = (e: React.FocusEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {

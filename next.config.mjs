@@ -1,11 +1,13 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  // Serve hero + gallery images as WebP/AVIF automatically
   images: {
-    // No remote images yet — all local placeholders.
-    // When adding real photos from /public/images/, no config needed.
-    // If you later use an external CDN, add remotePatterns here.
     remotePatterns: [],
+    formats: ["image/avif", "image/webp"],
+    minimumCacheTTL: 31536000, // 1 year
   },
+  compress: true,
+  poweredByHeader: false,
 };
 
 export default nextConfig;

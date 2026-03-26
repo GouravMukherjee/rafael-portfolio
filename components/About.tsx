@@ -18,27 +18,29 @@ export default function About() {
   const statRefs    = useRef<(HTMLSpanElement | null)[]>([]);
 
   useEffect(() => {
-    const portrait = portraitRef.current;
-    const content  = contentRef.current;
-    if (!portrait || !content) return;
+    const ctx = gsap.context(() => {
+      const portrait = portraitRef.current;
+      const content  = contentRef.current;
+      if (!portrait || !content) return;
 
-    gsap.fromTo(portrait, { opacity: 0, x: -40 }, { opacity: 1, x: 0, duration: 1.0, ease: "power3.out", scrollTrigger: { trigger: portrait, start: "top 80%", once: true } });
-    gsap.fromTo(content,  { opacity: 0, x: 40  }, { opacity: 1, x: 0, duration: 1.0, ease: "power3.out", scrollTrigger: { trigger: content,  start: "top 80%", once: true } });
+      gsap.fromTo(portrait, { opacity: 0, x: -40 }, { opacity: 1, x: 0, duration: 1.0, ease: "power3.out", scrollTrigger: { trigger: portrait, start: "top 80%", once: true } });
+      gsap.fromTo(content,  { opacity: 0, x: 40  }, { opacity: 1, x: 0, duration: 1.0, ease: "power3.out", scrollTrigger: { trigger: content,  start: "top 80%", once: true } });
 
-    stats.forEach(({ value }, i) => {
-      const el = statRefs.current[i];
-      if (!el) return;
-      const obj = { count: 0 };
-      gsap.to(obj, {
-        count: value,
-        duration: 1.5,
-        ease: "power2.out",
-        onUpdate: () => { el.textContent = Math.round(obj.count).toLocaleString(); },
-        scrollTrigger: { trigger: el, start: "top 85%", once: true },
+      stats.forEach(({ value }, i) => {
+        const el = statRefs.current[i];
+        if (!el) return;
+        const obj = { count: 0 };
+        gsap.to(obj, {
+          count: value,
+          duration: 1.5,
+          ease: "power2.out",
+          onUpdate: () => { el.textContent = Math.round(obj.count).toLocaleString(); },
+          scrollTrigger: { trigger: el, start: "top 85%", once: true },
+        });
       });
     });
 
-    return () => { ScrollTrigger.getAll().forEach((t) => t.kill()); };
+    return () => ctx.revert();
   }, []);
 
   return (
